@@ -4,7 +4,6 @@ import bank_system.enums.*;
 import bank_system.transactions.*;
 public class Main {
     public static void main(String[] args) {
-        try {
             Address bankAddress = new Address("Armenia", "Yerevan", "Yerevan", "Baghramyan", "12");
             Bank bank = new Bank("ACBA Bank", bankAddress);
             BankAccount debitAccount = new BankAccount("1234567890123456", Currency.AMD, 50000, BankAccountType.DEBIT);
@@ -22,8 +21,5 @@ public class Main {
             System.out.println("Card Balance: " + card.getBalance());
             System.out.println("Debit Account Balance: " + debitAccount.getBalance());
             System.out.println("Credit Account Balance: " + creditAccount.getBalance());
-        } catch (Exception e) {
-            System.out.println("Transaction failed: " + e.getMessage());
-        }
     }
 }
